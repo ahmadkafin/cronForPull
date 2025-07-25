@@ -21,7 +21,7 @@ async function main() {
                 return;
             }
 
-            console.log('✅ Git Pull Success:', stdout);
+            console.log(`✅ Git Pull Success for ${[process.env.PROJECT_NAME]}:`, stdout);
             await sendEmail('✅ [Deploy] Git Pull SUCCESS', `✅ Git berhasil di pull pada pukul Time: ${new Date().toLocaleString()}, dengan rincian : \n\n\n ${stdout}`);
         });
         console.log(cron.getTasks());
